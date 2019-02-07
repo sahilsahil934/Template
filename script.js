@@ -18,6 +18,27 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   });
+window.onscroll = () => {
+  console.log('----');
+  console.log(window.innerHeight);
+  console.log(window.scrollY);
+  console.log(document.body.offsetHeight);
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    type();
+  }
+};
+
+var i = 0;
+var txt = 'Never miss any update from us.';
+var speed = 100;
+
+  function type() {
+    if (i < txt.length) {
+      document.getElementById("invisible").innerHTML += txt.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    }
+ }
 
 const add = document.getElementById('quote')
 var bodyElement = document.querySelector("body");
@@ -27,9 +48,9 @@ bodyElement.addEventListener("mousemove", getMouseDirection, false);
 function getMouseDirection(e) {
   //deal with the horizontal case
   if (oldX < e.pageX) {
-    add.style.top = '80';
+    add.style.left = '-10px';
   } else {
-    add.style.top = '120px';
+    add.style.top = '10px';
   }
 
   //deal with the vertical case
@@ -41,11 +62,9 @@ function getMouseDirection(e) {
 
   oldX = e.pageX;
   oldY = e.pageY;
-
 }
 
 
-$(function() {
 $('#country').autocomplete({
   minLength: 3,
   source:
@@ -80,5 +99,3 @@ $('#country').autocomplete({
   "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"]
 
 });
-});
-

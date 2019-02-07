@@ -1,3 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+
 a {
   color: inherit;
   font-style: italic;
@@ -10,6 +15,8 @@ nav {
   left: 0;
   height: 4em;
   width: 100%;
+  background-position: left-top;
+  background-repeat: no-repeat;
   background-color: transparent;
   box-sizing: border-box;
   padding: 5px 18px;
@@ -29,30 +36,82 @@ nav.scroll {
 }
 
 #first {
-  height: 57em;
+  height: 60em;
   background-size: cover;
   width: auto;
   background-position: 50% 50%;
   position: relative;
   background-image: url('./images/travel.jpg');
+  background-position: 10px;
   animation: mymove 3s;
 }
 
 @keyframes mymove {
+ 
   0% {
-    opacity: 1;
-  }
+       opacity: 0;
+       transform: translateX(-2000px);
+     }
+  100% {
+        opacity: 1;
+        transform: translateX(-10);
+      }
+}
 
-  5% {
-    opacity: 0.75;
-  }
+#firstline {
+  position: relative;
+  background-position: 10px;
+  animation: fine 3s;
+}
 
-  50% {
-    opacity: 0.5;
+@keyframes fine {
+
+  0% {
+    opacity: 0;
+    left: -2000px;
   }
 
   100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+#secondline {
+  position: relative;
+  background-position: 10px;
+  animation: fine 5s;
+}
+
+@keyframes fine {
+
+  0% {
     opacity: 0;
+    left: -2000px;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+#thirdline {
+  position: relative;
+  background-position: 10px;
+  animation: game 6s;
+}
+
+@keyframes game {
+
+  0% {
+    opacity: 0;
+    top: -2000px;
+  }
+
+  100% {
+    opacity: 1;
+    top: 0px;
   }
 }
 .orange {
@@ -95,7 +154,7 @@ nav span {
 .buttonone {
   text-transform: uppercase;
   position: absolute;
-  right: 30px;
+  right: 10px;
   top: 10px;
   display: block;
   margin: 0 auto;
@@ -109,9 +168,6 @@ nav span {
   transition: all 0.3s ease-out;
 }
 
-#buttontwo {
-  right: 150px;
-}
 
 #second {
   padding-top: 20px;
@@ -139,4 +195,18 @@ input {
   margin-top: 20px;
   border-color: blue;
   border-radius: 10px;
+}
+
+#invisible{
+  color: white;
+  font-family: monospace;
+  font-size: 20px;
+
+}
+
+#copyright {
+  text-align: center;
+  color: red;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
