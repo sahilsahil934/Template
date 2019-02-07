@@ -1,0 +1,139 @@
+a {
+  color: inherit;
+  font-style: italic;
+}
+
+nav {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4em;
+  width: 100%;
+  background-color: transparent;
+  box-sizing: border-box;
+  padding: 5px 18px;
+  box-shadow: 0px 4px 7px #777;
+  transition: background-color 0.4s ease-out;
+}
+
+nav span {
+  font-weight: 600;
+  letter-spacing: .085em;
+}
+
+
+nav.scroll {
+  background-color: #A1572F;
+  color: #eef;
+}
+
+#first {
+  height: 61em;
+  background-size: cover;
+  width: auto;
+  /* background-image: url('./images/travel.jpg'); */
+  background-position: 50% 50%;
+  position: relative;
+  background-color: grey;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.white {
+  color: white;
+}
+
+#quote {
+  top: 100px;
+  margin-left: 670px;
+  align-items: center;
+  color: green;
+  z-index: 2;
+  position: relative;
+  font-size: 50px;
+  transition: top ease 2.0s;
+
+}
+
+#secondline {
+  margin-left: 38px;
+}
+
+#thirdline {
+  margin-left: 160px;
+}
+
+#quote:hover {
+  top: 90px;
+}
+
+.up {
+  top: 80px;
+}
+
+.dowm {
+  top: 120px;
+}
+
+nav span {
+  font-weight: 600;
+  letter-spacing: .085em;
+}
+
+.buttonone {
+  /* position: absolute;
+  top: 0;
+  transform: translateY(50%);
+  right: 0;
+  min-height: 1.5em;
+  min-width: 80px;
+  background-color: transparent;
+  color: #222;
+  border: 2px;
+  border-radius: 2px;
+  margin-right: 18px; */
+  text-transform: uppercase;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  display: block;
+  margin: 0 auto;
+  padding: 8px;
+  background: transparent;
+  border-radius: 8px;
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-out;
+}
+
+#buttontwo {
+  right: 150px;
+}
+
+#second {
+  padding-top: 20px;
+  text-align: center;
+  background: linear-gradient(black, white);
+  height: 500px;
+  width: 100%;
+}
+
+#signup {
+  color: white;
+}
+
+#form {
+  margin-left: 36%;
+  height: 600px;
+  width: 500px;
+  border: solid black 2px;
+}
