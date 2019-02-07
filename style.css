@@ -29,15 +29,32 @@ nav.scroll {
 }
 
 #first {
-  height: 61em;
+  height: 57em;
   background-size: cover;
   width: auto;
-  /* background-image: url('./images/travel.jpg'); */
   background-position: 50% 50%;
   position: relative;
-  background-color: grey;
+  background-image: url('./images/travel.jpg');
+  animation: mymove 3s;
 }
 
+@keyframes mymove {
+  0% {
+    opacity: 1;
+  }
+
+  5% {
+    opacity: 0.75;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 .orange {
   color: orange;
 }
@@ -59,7 +76,6 @@ nav.scroll {
   position: relative;
   font-size: 50px;
   transition: top ease 2.0s;
-
 }
 
 #secondline {
@@ -70,17 +86,6 @@ nav.scroll {
   margin-left: 160px;
 }
 
-#quote:hover {
-  top: 90px;
-}
-
-.up {
-  top: 80px;
-}
-
-.dowm {
-  top: 120px;
-}
 
 nav span {
   font-weight: 600;
@@ -88,17 +93,6 @@ nav span {
 }
 
 .buttonone {
-  /* position: absolute;
-  top: 0;
-  transform: translateY(50%);
-  right: 0;
-  min-height: 1.5em;
-  min-width: 80px;
-  background-color: transparent;
-  color: #222;
-  border: 2px;
-  border-radius: 2px;
-  margin-right: 18px; */
   text-transform: uppercase;
   position: absolute;
   right: 30px;
@@ -132,8 +126,17 @@ nav span {
 }
 
 #form {
+  z-index: 3;
+  box-shadow: 50px yellow;
   margin-left: 36%;
-  height: 600px;
+  padding-top: 20px;
+  height: 350px;
   width: 500px;
-  border: solid black 2px;
+}
+
+input {
+  padding: 10px;
+  margin-top: 20px;
+  border-color: blue;
+  border-radius: 10px;
 }

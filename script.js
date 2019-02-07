@@ -1,7 +1,13 @@
+let x;
+
+var xDirection = "";
+var yDirection = "";
+
+var oldX = 0;
+var oldY = 0;
+
 document.addEventListener('DOMContentLoaded', () => {
-
-  document.getElementById('first').style.backgroundImage = "url('./images/travel.jpg')";
-
+ 
   document.onscroll = () => {
     const nav = document.querySelector('#navbar');
     if (this.scrollY <= 10) {
@@ -9,10 +15,36 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       nav.className = 'scroll';
     }
-  }; 
-});
+  };
 
-function auto() {
+  });
+
+const add = document.getElementById('quote')
+var bodyElement = document.querySelector("body");
+bodyElement.addEventListener("mousemove", getMouseDirection, false);
+
+
+function getMouseDirection(e) {
+  //deal with the horizontal case
+  if (oldX < e.pageX) {
+    add.style.top = '80';
+  } else {
+    add.style.top = '120px';
+  }
+
+  //deal with the vertical case
+  if (oldY < e.pageY) {
+    add.style.top = '80px';
+  } else {
+    add.style.top = '120px';
+  }
+
+  oldX = e.pageX;
+  oldY = e.pageY;
+
+}
+
+
 $(function() {
 $('#country').autocomplete({
   minLength: 3,
@@ -49,4 +81,4 @@ $('#country').autocomplete({
 
 });
 });
-}
+
