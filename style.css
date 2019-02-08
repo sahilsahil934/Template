@@ -42,7 +42,7 @@ nav.scroll {
   background-position: 50% 50%;
   position: relative;
   background-image: url('./images/travel.jpg');
-  background-position: 10px;
+  background-position: 0px;
   animation: mymove 3s;
 }
 
@@ -54,7 +54,7 @@ nav.scroll {
      }
   100% {
         opacity: 1;
-        transform: translateX(-10);
+        transform: translateX(0);
       }
 }
 
