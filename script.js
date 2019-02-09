@@ -27,7 +27,7 @@ var countries =   ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "An
 "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", 
 "Turkmenistan", "Turks & Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", 
 "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", 
-"Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"]
+"Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
 
 
 var xDirection = "";
@@ -60,14 +60,13 @@ function myFunction2() {
   let variable = sahil.charAt(0).toUpperCase() + sahil.slice(1);
   if (size >= 3) {
     arr = countries.filter(item => (
-      (item.substring(0, size) == variable)
-      
+      (item.substring(0, size) == variable)   
     ));     
+    }
     $('#country').autocomplete({
       minLength: 3,
       source: arr
-    });
-    }  
+    });  
 }
 
 
